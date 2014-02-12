@@ -1,7 +1,5 @@
-#!/bin/bash
-
-for last; do true; done
-go_to=${last%:*}
-cd_to=${last##*:}
-
-eval "ssh ${@:1:$(($#-1))} $go_to \"cd $cd_to\""
+#!/bin/bash 
+last="${!#}"
+cmd=("ssh" "-t" "${@:1:$(($#-1))}" "${last%:*}" "cd ${last##*:}; bash -l")
+echo "${cmd[@]}"
+"${cmd[@]}"
