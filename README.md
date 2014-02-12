@@ -4,6 +4,8 @@ Tired of having to cd around after you've SSH'd into a server? Me too.
 
 ![](http://i.imgur.com/rLvUvxU.png?1)
 
+P.S. This works *perfectly* with [whereami](https://github.com/christianbundy/whereami).
+
 ## installation
 
 ```sh
