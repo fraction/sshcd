@@ -1,10 +1,16 @@
 # sshcd
 
-Tired of having to cd around after you've SSH'd into a server? Me too.
+Tired of having to type this janky command to [ssh](http://manpages.ubuntu.com/manpages/saucy/en/man1/ssh.1.html) and [cd](http://manpages.ubuntu.com/manpages/saucy/en/man1/cd.1posix.html) into unfamiliar remote servers?
 
-![](http://i.imgur.com/rLvUvxU.png?1)
+```sh
+$ ssh -t user@pretend.io "cd /over/the/rainbow; exec \$SHELL"
+```
 
-P.S. This works *perfectly* with [whereami](https://github.com/christianbundy/whereami).
+Me too.
+
+```sh
+$ sshcd user@pretend.io:/over/the/rainbow
+```
 
 ## installation
 
