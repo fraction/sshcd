@@ -2,6 +2,8 @@
 
 Tired of having to cd around after you've SSH'd into a server? Me too.
 
+![](http://i.imgur.com/rLvUvxU.png?1)
+
 ## installation
 
 ```sh
