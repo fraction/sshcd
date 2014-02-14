@@ -15,7 +15,8 @@ $ sshcd user@pretend.io:/over/the/rainbow
 ## installation
 
 ```sh
-$ curl -s https://raw.github.com/christianbundy/sshcd/master/install.sh | sh
+$ git clone https://github.com/christianbundy/sshcd
+$ sudo make install PREFIX=/usr/local
 ```
 
 ## usage
