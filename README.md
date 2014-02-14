@@ -16,7 +16,7 @@ $ sshcd user@pretend.io:/over/the/rainbow
 
 ```sh
 $ git clone https://github.com/christianbundy/sshcd
-$ sudo make install PREFIX=/usr/local
+$ sudo make -C sshcd install PREFIX=/usr/local
 ```
 
 ## usage
