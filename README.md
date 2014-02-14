@@ -19,6 +19,14 @@ $ git clone https://github.com/christianbundy/sshcd
 $ sudo make -C sshcd install PREFIX=/usr/local
 ```
 
+Or without using Git:
+
+```sh
+$ wget https://github.com/christianbundy/sshcd/archive/v1.0.0.tar.gz
+$ tar --get --gzip < v1.0.0.tar.gz
+$ sudo make -C sshcd-1.0.0 install PREFIX=/usr/local
+```
+
 ## usage
 
 The default usage is pretty simple.
