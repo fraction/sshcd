@@ -12,13 +12,13 @@ Me too.
 $ sshcd user@pretend.io:/over/the/rainbow
 ```
 
-## installation
+## Installation
 
 ```sh
 $ curl -s https://raw.github.com/christianbundy/sshcd/master/install.sh | sh
 ```
 
-## usage
+## Usage
 
 The default usage is pretty simple.
 
@@ -26,7 +26,7 @@ The default usage is pretty simple.
 $ sshcd root@example.com:/your/favorite/folder
 ```
 
-It supports prepended flags, too!
+The tool supports prepended flags, too!
 
 ```sh
 $ sshcd -v root@example.com:/lets/get/verbose
