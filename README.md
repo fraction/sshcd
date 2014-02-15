@@ -12,7 +12,7 @@ Me too.
 $ sshcd user@pretend.io:/over/the/rainbow
 ```
 
-## installation
+## Installation
 
 ```sh
 $ git clone https://github.com/christianbundy/sshcd
@@ -27,7 +27,7 @@ $ tar --get --gzip < v1.0.0.tar.gz
 $ sudo make -C sshcd-1.0.0 install PREFIX=/usr/local
 ```
 
-## usage
+## Usage
 
 The default usage is pretty simple.
 
@@ -35,7 +35,7 @@ The default usage is pretty simple.
 $ sshcd root@example.com:/your/favorite/folder
 ```
 
-It supports prepended flags, too!
+The tool supports prepended flags, too!
 
 ```sh
 $ sshcd -v root@example.com:/lets/get/verbose
