@@ -1,4 +1,4 @@
-PREFIX ?= /usr
+PREFIX ?= /usr/local
 BIN ?= /bin
 DATA ?= /share
 BINDIR ?= $(PREFIX)$(BIN)
