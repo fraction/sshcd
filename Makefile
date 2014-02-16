@@ -10,6 +10,7 @@ PKGNAME ?= sshcd
 
 .PHONY: all
 all:
+	@echo Nothing to compile
 
 
 .PHONY: install
@@ -27,4 +28,5 @@ uninstall:
 
 .PHONY: clean
 clean:
+	@echo Nothing to clean
 
