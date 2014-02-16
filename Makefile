@@ -1,11 +1,11 @@
-PREFIX = /usr
-BIN = /bin
-DATA = /share
-BINDIR = $(PREFIX)$(BIN)
-DATADIR = $(PREFIX)$(DATA)
+PREFIX ?= /usr
+BIN ?= /bin
+DATA ?= /share
+BINDIR ?= $(PREFIX)$(BIN)
+DATADIR ?= $(PREFIX)$(DATA)
 
-COMMAND = sshcd
-PKGNAME = sshcd
+COMMAND ?= sshcd
+PKGNAME ?= sshcd
 
 
 .PHONY: all
