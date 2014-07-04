@@ -22,9 +22,9 @@ sudo make -C sshcd install PREFIX=/usr/local
 Or without using Git:
 
 ```sh
-wget https://github.com/christianbundy/sshcd/archive/v1.0.1.tar.gz
-tar --get --gzip < v1.0.1.tar.gz
-sudo make -C sshcd-1.0.1 install PREFIX=/usr/local
+wget https://github.com/christianbundy/sshcd/archive/v1.0.2.tar.gz
+tar --get --gzip < v1.0.2.tar.gz
+sudo make -C sshcd-1.0.2 install PREFIX=/usr/local
 ```
 
 ## Usage
