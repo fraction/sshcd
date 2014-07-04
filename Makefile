@@ -13,8 +13,10 @@ all:
 
 .PHONY: install
 install:
-	install -Dm755 sshcd -- "$(DESTDIR)$(BINDIR)/$(COMMAND)"
-	install -Dm644 LICENSE -- "$(DESTDIR)$(DATADIR)/licenses/$(PKGNAME)/LICENSE"
+	install -dm755 "$(DESTDIR)$(BINDIR)"
+	install -m755 sshcd "$(DESTDIR)$(BINDIR)/$(COMMAND)"
+	install -dm644 "$(DESTDIR)$(DATADIR)/licenses/$(PKGNAME)"
+	install -m644 LICENSE "$(DESTDIR)$(DATADIR)/licenses/$(PKGNAME)/LICENSE"
 
 .PHONY: uninstall
 uninstall:
@@ -25,4 +27,3 @@ uninstall:
 .PHONY: clean
 clean:
 	@echo Nothing to clean
-
