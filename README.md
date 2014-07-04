@@ -14,12 +14,21 @@ sshcd user@pretend.io:/over/the/rainbow
 
 ## Installation
 
+The recommended OS X installation method is with [Homebrew](http://brew.sh/).
+
+```sh
+brew tap christianbundy/homebrew-tap
+brew install sshcd
+```
+
+Alternatively, you can install it with Git.
+
 ```sh
 git clone https://github.com/christianbundy/sshcd
 sudo make -C sshcd install PREFIX=/usr/local
 ```
 
-Or without using Git:
+Don't want to use Git? You can also use wget.
 
 ```sh
 wget https://github.com/christianbundy/sshcd/archive/v1.0.2.tar.gz
