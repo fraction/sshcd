@@ -6,7 +6,7 @@ Tired of having to type this janky command to [ssh](http://manpages.ubuntu.com/m
 ssh -t user@fraction.io "cd /foo/bar; exec \$SHELL"
 ```
 
-Me too.
+Stop it. Connect with SSH and cd (change directory) with one command.
 
 ```sh
 sshcd user@fraction.io:/foo/bar
