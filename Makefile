@@ -15,7 +15,7 @@ all:
 install:
 	install -dm755 "$(DESTDIR)$(BINDIR)"
 	install -m755 sshcd "$(DESTDIR)$(BINDIR)/$(COMMAND)"
-	install -dm644 "$(DESTDIR)$(DATADIR)/licenses/$(PKGNAME)"
+	install -dm755 "$(DESTDIR)$(DATADIR)/licenses/$(PKGNAME)"
 	install -m644 LICENSE "$(DESTDIR)$(DATADIR)/licenses/$(PKGNAME)/LICENSE"
 
 .PHONY: uninstall
