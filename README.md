@@ -14,26 +14,17 @@ sshcd user@fraction.io:/foo/bar
 
 ## Installation
 
-The recommended OS X installation method is with [Homebrew](http://brew.sh/).
+Use Homebrew to download and install the executable.
 
 ```sh
 brew tap fraction/homebrew-formulae
 brew install sshcd
 ```
 
-Alternatively, you can install it with Git.
+Alternatively, download the executable into your path with a single command.
 
 ```sh
-git clone https://github.com/fraction/sshcd
-sudo make -C sshcd install PREFIX=/usr/local
-```
-
-Don't want to use Git? You can also use wget.
-
-```sh
-wget https://github.com/fraction/sshcd/archive/v1.0.2.tar.gz
-tar --get --gzip < v1.0.2.tar.gz
-sudo make -C sshcd-1.0.2 install PREFIX=/usr/local
+sudo curl -o /usr/local/bin/sshcd https://raw.githubusercontent.com/fraction/sshcd/master/sshcd
 ```
 
 ## Usage
