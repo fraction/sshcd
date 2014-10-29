@@ -21,10 +21,12 @@ brew tap fraction/homebrew-formulae
 brew install sshcd
 ```
 
-Alternatively, download the executable into your path with a single command.
+Add the executable into your path and give it permissions.
 
 ```sh
+
 sudo curl -o /usr/local/bin/sshcd https://raw.githubusercontent.com/fraction/sshcd/master/sshcd
+sudo chmod +x /usr/local/bin/sshcd
 ```
 
 ## Usage
