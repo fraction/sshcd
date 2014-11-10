@@ -25,7 +25,7 @@ Add the executable into your path and give it permissions.
 
 ```sh
 
-sudo curl -o /usr/local/bin/sshcd https://raw.githubusercontent.com/fraction/sshcd/master/sshcd
+sudo curl -Lo /usr/local/bin/sshcd http://git.io/wfAXEQ
 sudo chmod +x /usr/local/bin/sshcd
 ```
 
