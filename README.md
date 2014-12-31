@@ -3,7 +3,7 @@
 Tired of having to type this janky command to [ssh](http://manpages.ubuntu.com/manpages/saucy/en/man1/ssh.1.html) and [cd](http://manpages.ubuntu.com/manpages/saucy/en/man1/cd.1posix.html) into unfamiliar remote servers?
 
 ```sh
-ssh -t user@fraction.io "cd /foo/bar; exec \$SHELLv --login"
+ssh -t user@fraction.io "cd /foo/bar; exec \$SHELL --login"
 ```
 
 Stop it. Connect with SSH and cd (change directory) with one command.
