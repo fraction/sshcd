@@ -25,6 +25,7 @@ Add the executable into your path and give it permissions.
 
 ```sh
 
+
 sudo curl -Lo /usr/local/bin/sshcd http://git.io/wfAXEQ
 sudo chmod +x /usr/local/bin/sshcd
 ```
@@ -42,3 +43,10 @@ The tool supports prepended flags, too!
 ```sh
 sshcd -v user@fraction.io:/foo/bar
 ```
+## Support
+
+Please [open an issue](https://github.com/fraction/sshcd/issues/new) for questions and concerns.
+
+## Contributing
+
+Fork the project, commit your changes, and [open a pull request](https://github.com/fraction/sshcd/compare/).
