@@ -24,8 +24,6 @@ brew install sshcd
 Add the executable into your path and give it permissions.
 
 ```sh
-
-
 sudo curl -Lo /usr/local/bin/sshcd http://git.io/wfAXEQ
 sudo chmod +x /usr/local/bin/sshcd
 ```
