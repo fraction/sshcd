@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 options=("${@:1:$(($# - 1))}")                  # Everything in "$@" except the last argument
 target="${!#}"                                  # The last argument from "$@"
 
@@ -13,10 +13,16 @@ fi
 if [ "${target::1}" = "[" ]; then               # Syntax:  [user@]\[hostname\]:path
     remote="${target%\]*}]"
     path="${target#*\]}"
+    if [ -z "${path}" ]; then
+	exec ssh "$@"
+    fi
     path="${path:1}"
 else                                            # Syntax:  [user@]hostname:path
     remote="${target%%:*}"
     path="${target#*:}"
+    if [ "${path}" = "${target}" ]; then
+	exec ssh "$@"
+    fi
 fi
 
 # Construct target argument for ssh
