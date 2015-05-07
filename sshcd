@@ -1,5 +1,6 @@
-#!/bin/bash 
-t="${!#}"
-c=("ssh" "-t" "${@:1:$(($#-1))}" "${t%:*}" "cd ${t##*:}; exec \$SHELL -l")
-exec "${c[@]}"
-
+#!/bin/bash
+options=("${@:1:$(($# - 1))}") # Everything in "$@" except the last argument
+target="${!#}"                 # The last argument from "$@"
+remote="${target%:*}"
+path="${target##*:}"
+exec ssh -t "${options[@]}" "${remote}" "cd ${path}; exec \$SHELL -l"
