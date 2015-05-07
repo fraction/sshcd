@@ -1,7 +1,28 @@
 #!/bin/bash
-options=("${@:1:$(($# - 1))}") # Everything in "$@" except the last argument
-target="${!#}"                 # The last argument from "$@"
-remote="${target%:*}"
-path="${target##*:}"
+options=("${@:1:$(($# - 1))}")                  # Everything in "$@" except the last argument
+target="${!#}"                                  # The last argument from "$@"
+
+# Get user
+usertest="${target%%:*}"
+if [ ! "${usertest/@/}" = "${usertest}" ]; then # user is included in the target
+    user="${target%%@*}"                        # Get user
+    target="${target#*@}"                       # Strip out user
+fi
+
+# Get hostname and path
+if [ "${target::1}" = "[" ]; then               # Syntax:  [user@]\[hostname\]:path
+    remote="${target%\]*}]"
+    path="${target#*\]}"
+    path="${path:1}"
+else                                            # Syntax:  [user@]hostname:path
+    remote="${target%%:*}"
+    path="${target#*:}"
+fi
+
+# Construct target argument for ssh
+if [ ! "${usertest/@/}" = "${usertest}" ]; then # user is included in the target
+    remote="${user}@${remote}"                  # Reattach user
+fi
+
 path="${path/\'/\'\\\'\'}"
 exec ssh -t "${options[@]}" "${remote}" "cd '${path}'; exec \$SHELL -l"
